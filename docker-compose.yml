@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  server:
+    build: .
+    ports:
+      - "5555:5555"
+    container_name: chat-server
+    restart: unless-stopped
