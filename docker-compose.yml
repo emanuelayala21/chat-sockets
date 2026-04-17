@@ -7,3 +7,5 @@ services:
       - "5555:5555"
     container_name: chat-server
     restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1 #printee todos los outputs en tiempo real

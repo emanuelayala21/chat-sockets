@@ -7,7 +7,7 @@ PORT = 5555
 
 
 def receive_messages(client_socket: socket.socket):
-    """Hilo que escucha mensajes entrantes del servidor."""
+    #Hilo que escucha mensajes entrantes del servidor.
     while True:
         try:
             message = client_socket.recv(1024)
@@ -23,7 +23,7 @@ def receive_messages(client_socket: socket.socket):
 
 
 def send_messages(client_socket: socket.socket):
-    """Hilo que lee input del usuario y lo envía al servidor."""
+    #Hilo que lee input del usuario y lo envía al servidor.
     while True:
         try:
             message = input()
