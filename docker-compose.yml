@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   server:
     build: .
@@ -8,4 +6,4 @@ services:
     container_name: chat-server
     restart: unless-stopped
     environment:
-      - PYTHONUNBUFFERED=1 #printee todos los outputs en tiempo real
+      - PYTHONUNBUFFERED=1

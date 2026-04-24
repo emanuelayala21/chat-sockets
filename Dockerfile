@@ -2,8 +2,13 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY server.py .
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY server_ws.py .
+COPY index.html .
 
 EXPOSE 5555
+EXPOSE 8080
 
-CMD ["python", "server.py"]
+CMD ["python", "server_ws.py"]
